@@ -1,0 +1,92 @@
+<div class="container">
+    <div style="display: flex">
+      <mat-icon matPrefix>person</mat-icon>
+      <mat-form-field>
+        <input matInput placeholder="client number" id="clientNumber" name="clientNumber" [(ngModel)]="_client.clientNumber" style="flex: 1">
+      </mat-form-field>
+    </div>
+    <div style="display: flex">
+      <mat-icon matPrefix>person</mat-icon>
+      <mat-form-field>
+        <input matInput placeholder="first name" id="firstName" name="firstName" [(ngModel)]="_client.firstName" style="flex: 1">
+      </mat-form-field>
+    </div>
+    <div style="display: flex">
+      <mat-icon matPrefix>person</mat-icon>
+      <mat-form-field>
+        <input matInput placeholder="middle name" id="middleName" [(ngModel)]="_client.middleName" style="flex: 1">
+      </mat-form-field>
+    </div>
+    <div style="display: flex">
+      <mat-icon matPrefix>person</mat-icon>
+      <mat-form-field>
+        <input matInput placeholder="last name" id="lastName" [(ngModel)]="_client.lastName" style="flex: 1">
+      </mat-form-field>
+    </div>
+  
+    <div style="display: flex">
+      <mat-icon matPrefix>calendar</mat-icon>
+      <mat-form-field>
+        <input matInput placeholder="birthdate" id="birthdate" name="birthdate" [value]="_client.birthdate | date: 'MM/dd/yyyy'">
+      </mat-form-field>
+    </div>
+  
+    <div style="display: flex">
+      <mat-icon matPrefix>calendar</mat-icon>
+      <mat-form-field>
+        <input matInput placeholder="address1" id="address1" [(ngModel)]="_client.address1">
+      </mat-form-field>
+    </div>
+      
+    <div style="display: flex">
+      <mat-icon matPrefix>calendar</mat-icon>
+      <mat-form-field>
+        <input matInput placeholder="address2" id="address2" [(ngModel)]="_client.address2">
+      </mat-form-field>
+    </div>
+  
+    <div style="display: flex">
+      <mat-icon matPrefix>calendar</mat-icon>
+      <mat-form-field>
+        <input matInput placeholder="zone name" id="zoneName" [(ngModel)]="_client.zoneName">
+      </mat-form-field>
+    </div>
+  
+    <div style="display: flex">
+      <mat-icon matPrefix>calendar</mat-icon>
+      <mat-form-field>
+        <input matInput placeholder="barangay" id="barangayName" [(ngModel)]="_client.barangayName">
+      </mat-form-field>
+    </div>
+  
+    <div style="display: flex">
+      <mat-icon matPrefix>calendar</mat-icon>
+      <mat-select placeholder="city" [(ngModel)]="_client.cityName">
+        <mat-option value="sjc">san jose city</mat-option>
+        <mat-option value="cab">cabanatuan city</mat-option>
+        <mat-option value="bag">baguio city</mat-option>
+        <mat-option value="scm">science city of munoz</mat-option>
+      </mat-select>
+    </div>    
+    
+    <div style="display: flex">
+      <mat-icon matPrefix>calendar</mat-icon>
+      <mat-select placeholder="province" [(ngModel)]="_client.provinceName">
+        <mat-option value="ne">nueva ecija</mat-option>
+        <mat-option value="bu">bulacan</mat-option>
+        <mat-option value="be">benguet</mat-option>
+        <mat-option value="tu">tuguegarao</mat-option>
+      </mat-select>
+    </div>    
+  
+    <div style="display: flex; margin-top: 5vh">
+      <button mat-raised-button color="primary" (click)="update(_client)">Update</button>
+      <button mat-button>Cancel</button>
+      <span style="flex: 1 1 auto"></span>
+      <button mat-button color="warn" (click)="newLoan(_client)">New Loan</button>
+      <button mat-button color="accent" (click)="loans(_client)">Loans</button>
+      <button mat-button disabled>Inactive</button>
+    </div>
+  
+  </div>
+  

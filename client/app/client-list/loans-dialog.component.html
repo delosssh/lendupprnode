@@ -1,0 +1,32 @@
+<h1 md-dialog-title class="primary-color">Client Loans</h1>
+<mat-dialog-content class="accent-color">
+  <!-- <header style="display: flex">
+    <div style="flex: 1">Loan Id</div>
+    <div style="flex: 1">Application Date</div>
+    <div style="flex: 1">Principal</div>
+    <div style="flex: 1">Interest (%)</div>
+  </header>
+  <div style="display: flex" *ngFor="let loan of loans">
+    <div style="flex: 1">{{loan.loanId}}</div>
+    <div style="flex: 1">{{loan.applicationDate | date: 'MM/dd/yyyy'}}</div>
+    <div style="flex: 1">{{loan.principalAmount}}</div>
+    <div style="flex: 1"><a (click)="gotoDetails(loan)" class="nav-item nav-link" routerLinkActive="active">{{loan.interestRate}}</a></div>
+  </div> -->
+  <div style="display: flex; flex-wrap: wrap">
+    <mat-card *ngFor="let loan of loans" style="flex: 1; max-width: 20rem">
+      <mat-card-title>{{ loan.loanId }}</mat-card-title>
+      <mat-card-content>
+        <span matLine>{{ loan.applicationDate | date: 'MM/dd/yyyy' }}</span>
+        <span matLine>{{ loan.principalAmount }}</span>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="accent" mat-dialog-close (click)="gotoDetails(loan)">Details</button>
+      </mat-card-actions>
+    </mat-card> 
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button color="primary" mat-dialog-close>
+    Close
+  </button>
+</mat-dialog-actions>

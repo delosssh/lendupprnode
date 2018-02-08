@@ -1,0 +1,20 @@
+// @media (max-width: 600px) {
+//   md-card {
+//     min-width:17rem;
+//     min-height: 100vh;
+//     flex: 0 0 250px;
+//     margin: 10;
+//     margin-top: 10px;
+//     margin-left: 10px;
+    
+//   }
+// }
+
+mat-card {
+  min-width:17rem;
+  flex: 0 0 250px;
+  margin: 10;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin: 10 10 10 10;
+}

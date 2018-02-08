@@ -1,0 +1,21 @@
+.fill-space {
+  /* // use flexbox to fill the remaining space.
+  // all rows use a flexbox layout. */
+flex: 1 1 auto;
+}
+
+.navbar {
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  top: 0;
+  height: 64px;
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  // background-color: #ffffff;
+}
+
+.navbar mat-toolbar {
+  // background-color: #ffffff;
+}

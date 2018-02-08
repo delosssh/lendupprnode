@@ -1,0 +1,54 @@
+<div style="display: flex">
+   <mat-horizontal-stepper linear="true">
+    <mat-step stepControl="firstStep">
+      <form fxLayout="column">
+        <ng-template matStepLabel>Tell us about yourself</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="first name" value="">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="middle name" value="">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="last name" value="">
+        </mat-form-field>
+
+
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step stepControl="secondStep">
+      <form fxLayout="column">
+        <ng-template matStepLabel>Tell us about your financials</ng-template>
+        <mat-form-field>
+          <mat-select placeholder="reason for the loan">
+            <mat-option>Car</mat-option>
+            <mat-option>House</mat-option>
+            <mat-option>Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div>what is your primary source of income</div>
+        <div>
+        <mat-radio-group matRadio>
+          <mat-radio-button value="business">Business</mat-radio-button>
+          <mat-radio-button value="employed">Employed</mat-radio-button>
+          <mat-radio-button value="remittance">Remittance</mat-radio-button>
+          <mat-radio-button value="pension">Pension</mat-radio-button>
+        </mat-radio-group>
+        </div>
+
+        <mat-form-field>
+          <input matInput placeholder="middle name" value="">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Prev</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-horizontal-stepper>
+
+</div>

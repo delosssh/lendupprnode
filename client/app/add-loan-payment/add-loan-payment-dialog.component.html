@@ -1,0 +1,56 @@
+<h1 md-dialog-title class="primary-color">Client Payments</h1>
+<md-dialog-content class="accent-color" style="max-width: 40rem;">
+  <div class="container" style="display: flex;" fxLayout="column">
+
+    <div fxFlex>
+      <mat-icon matPrefix>person</mat-icon>
+      <mat-form-field style="flex: 1">
+        <input matInput placeholder="due amount" id="dueAmount" [(ngModel)]="payment.dueAmount" style="flex: 1">
+      </mat-form-field>
+    </div>    
+    
+    <div>
+      <mat-icon matPrefix>person</mat-icon>
+      <mat-form-field> 
+        <input matInput placeholder="due date" id="dueDate" [(ngModel)]="payment.dueDate" style="flex: 1">
+      </mat-form-field>
+    </div>
+
+    <div style="display: flex; flex: 1">
+      <mat-icon matPrefix>person</mat-icon>
+      <mat-form-field style="flex: 1">
+        <input matInput placeholder="balance amount" id="balanceAmount" [(ngModel)]="payment.balanceAmount" style="flex: 1">
+      </mat-form-field>
+    </div>
+
+    <div style="display: flex">
+      <mat-icon matPrefix>person</mat-icon>
+      <mat-form-field>
+        <input matInput placeholder="last payment amount" id="lastPaymentAmount" [(ngModel)]="payment.lastPaymentAmount" style="flex: 1">
+      </mat-form-field>
+    </div>
+
+    <div style="display: flex">
+      <mat-icon matPrefix>person</mat-icon>
+      <mat-form-field>
+        <input matInput placeholder="last payment date" id="lastPaymentDate" [(ngModel)]="payment.lastPaymentDate" style="flex: 1">
+      </mat-form-field>
+    </div>
+
+    <div style="display: flex; flex: 1">
+      <mat-icon matPrefix>person</mat-icon>
+      <mat-form-field style="flex: 1">
+        <input matInput placeholder="amount paid" id="amountPaid" [(ngModel)]="payment.paidAmount" style="flex: 1">
+      </mat-form-field>
+    </div>
+    
+  </div>
+</md-dialog-content>
+<md-dialog-actions>
+  <button mat-raised-button color="primary" mat-dialog-close (click)="save()">
+    Save
+  </button>  
+  <button mat-raised-button mat-dialog-close>
+    Cancel
+  </button>  
+</md-dialog-actions>

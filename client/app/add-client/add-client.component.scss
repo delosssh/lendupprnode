@@ -1,0 +1,58 @@
+.form {
+  display: flex
+}
+.form__field {
+  flex: 1
+}
+.form__item {
+  background: rgba(0,0,0,0.25);
+  color: #fff;
+  border: 0;
+  padding: 10px;
+  margin: 0;
+}
+.form {
+  padding: 10px;
+}
+.form_field {
+  margin: 0
+}
+
+md-icon {
+  color: gray;
+  width: 24px;
+  margin: 16px 20px 0 10px;
+}
+mat-icon {
+  color: gray;
+  width: 24px;
+  margin: 16px 20px 0 10px;
+}
+
+input {
+  font-family: 'Roboto', cursive;
+}
+
+md-input-container {
+  flex: 1
+}
+mat-form-field {
+  flex: 1
+}
+
+md-select {
+  flex: 1
+}
+mat-select {
+  flex: 1
+}
+
+button {
+  // margin-top: 10px;
+  // padding: 10px 0 10px 0;
+  // padding-top: 10px;
+}
+
+button md-icon {
+  margin-top: 0px;
+}

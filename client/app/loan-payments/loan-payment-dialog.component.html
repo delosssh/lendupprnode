@@ -1,0 +1,57 @@
+<h1 md-dialog-title class="primary-color">Client Payments</h1>
+<mat-dialog-content class="accent-color">
+  <!-- <header style="display: flex">
+    <div style="flex: 1">Due Amount</div>
+    <div style="flex: 1">Due Date</div>
+    <div style="flex: 1">Balance</div>
+    <div style="flex: 1">Last Paid Amount</div>
+    <div style="flex: 1">Last Paid Date</div>
+  </header>
+  <div style="display: flex" *ngFor="let payment of payments">
+    <div style="flex: 1">{{payment.dueAmount}}</div>
+    <div style="flex: 1">{{payment.dueDate | date: 'MM/dd/yyyy'}}</div>
+    <div style="flex: 1">{{payment.balanceAmount}}</div>
+    <div style="flex: 1">{{payment.lastPaymentAmount}}</div>
+    <div style="flex: 1">{{payment.lastPaymentDate | date: 'MM/dd/yyyy'}}</div>
+  </div> -->
+
+  <div style="display: flex; flex-wrap: wrap;">
+    <mat-card *ngFor="let payment of payments" style="flex: 1; max-width: 20rem">
+      <mat-card-header>
+        Client Payments
+      </mat-card-header>
+      <mat-card-contents>
+        <mat-form-field>
+          <input matInput readonly="true" placeholder="amount due" [value]="payment.dueAmount">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput readonly="true" placeholder="due date" [value]="payment.dueDate | date: 'dd/MMM/yyyy'">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput readonly="true" placeholder="balance" [value]="payment.balanceAmount">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput readonly="true" placeholder="previous payment amount" [value]="payment.lastPaymentAmount">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput readonly="true" placeholder="previous payment date" [value]="payment.lastPaymentDate | date: 'dd/MMM/yyyy'">
+        </mat-form-field>
+  
+        <mat-form-field>
+          <input matInput readonly="true" placeholder="amount paid" [value]="payment.paidAmount">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput readonly="true" placeholder="date paid" [value]="payment.paidDate | date: 'dd/MMM/yyyy'">
+        </mat-form-field>
+        
+
+      </mat-card-contents>
+    </mat-card>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button color="primary" mat-dialog-close>
+    close button
+  </button>  
+</mat-dialog-actions>

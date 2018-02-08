@@ -1,0 +1,91 @@
+<div class="container" fxLayout="column">
+  <div fxFlex>
+      <div fxLayout="row">
+          <div fxFlex fxLayout="column">
+            <div fxFlex>
+              <mat-icon matPrefix>person</mat-icon>
+              <mat-form-field>
+                <input matInput placeholder="client number" [value]="loan.clientNumber" readonly="true">
+              </mat-form-field>
+            </div>            
+            <div fxFlex>
+              <mat-icon matPrefix>person</mat-icon>
+              <mat-form-field>
+                <input matInput placeholder="loan id" [value]="loan.loanId" readonly="true">
+              </mat-form-field>
+            </div>
+            <div fxFlex>
+                <mat-icon matPrefix>person</mat-icon>
+                <mat-form-field>
+                  <input matInput placeholder="loan amount" [value]="loan.principalAmount" readonly="true">
+                </mat-form-field>
+            </div>
+            <div fxFlex>
+                <mat-icon matPrefix>person</mat-icon>
+                <mat-form-field>
+                  <input matInput placeholder="interest rate" [value]="loan.interestRate" readonly="true">
+                </mat-form-field>
+            </div>
+            <div fxFlex>
+              <mat-icon matPrefix>person</mat-icon>
+              <mat-form-field>
+                <input matInput placeholder="number of payments" [value]="loan.numberOfPayments" readonly="true">
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div fxFlex fxLayout="column">
+            <div fxFlex>
+              <mat-icon matPrefix>person</mat-icon>
+              <mat-form-field>
+                <input matInput placeholder="loan type" [value]="loan.loanTypeId">
+              </mat-form-field>
+            </div>
+            <div fxFlex>
+                <mat-icon matPrefix>person</mat-icon>
+                <mat-form-field>
+                  <input matInput placeholder="payment type" [value]="loan.paymentTypeId">
+                </mat-form-field>
+            </div>
+            <div fxFlex>
+              <mat-icon matPrefix>person</mat-icon>
+              <mat-form-field>
+                <input matInput placeholder="application date" [value]="loan.applicationDate | date: 'MM/dd/yyyy'">
+              </mat-form-field>
+            </div>
+            <div fxFlex>
+              <mat-icon matPrefix>person</mat-icon>
+              <mat-form-field>
+                <input matInput placeholder="approve date" [value]="loan.loanApproveDate | date: 'MM/dd/yyyy'">
+              </mat-form-field>
+            </div>
+            <div fxFlex>
+              <mat-icon matPrefix>person</mat-icon>
+              <mat-form-field>
+                <input matInput placeholder="release date" [value]="loan.releaseDate | date: 'MM/dd/yyyy'">
+              </mat-form-field>
+            </div>
+            <div fxFlex>
+              <mat-icon matPrefix>person</mat-icon>
+              <mat-form-field>
+                <input matInput placeholder="due date" [value]="loan.dueDate | date: 'MM/dd/yyyy'">
+              </mat-form-field>
+            </div>
+    
+          </div> <!-- div fxFlex fxLayout="column" -->
+      </div>        
+  </div>  
+  <!-- <div fxFlex>
+    <div style="display: flex" *ngFor="let payment of payments">
+      <div style="flex: 1">{{payment.dueAmount}}</div>
+      <div style="flex: 1">{{payment.dueDate | date: 'mm/dd/yyyy'}}</div>
+      <div style="flex: 1">{{payment.balanceAmount}}</div>
+    </div>
+  </div> -->
+
+  <div style="display: flex; margin-top: 5vh" fxLayoutAlign="center">
+    <button mat-raised-button color="primary" (click)="addPaymentDialog()">Add Payment</button>
+    <button mat-raised-button (click)="paymentsDialog()">Payments</button>
+  </div>
+  
+</div>

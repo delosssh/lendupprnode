@@ -1,0 +1,94 @@
+<div style="display: flex">
+   <mat-horizontal-stepper linear="true">
+    <mat-step stepControl="firstStep">
+      <form fxLayout="column">
+        <ng-template matStepLabel>Tell us about yourself</ng-template>
+
+        <mat-form-field>
+          <mat-select placeholder="reason for the loan">
+            <mat-option value="car">Car</mat-option>
+            <mat-option value="house">House</mat-option>
+            <mat-option value="other">Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div>what is your primary source of income</div>
+        <div>
+        <mat-radio-group matRadio>
+          <mat-radio-button value="business">Business</mat-radio-button>
+          <mat-radio-button value="employed">Employed</mat-radio-button>
+          <mat-radio-button value="remittance">Remittance</mat-radio-button>
+          <mat-radio-button value="pension">Pension</mat-radio-button>
+        </mat-radio-group>
+        </div>
+
+        <mat-form-field>
+          <input matInput placeholder="How much do you need (peso)?" name="principalAmount" [(ngModel)]="loan.principalAmount">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-select placeholder="payment type" name="paymentTypeId" [(ngModel)]="loan.paymentTypeId">
+            <mat-option value="daily">Daily</mat-option>
+            <mat-option value="weekly">Weekly</mat-option>
+            <mat-option value="monthly">Monthly</mat-option>
+            <mat-option value="other">Other</mat-option>
+            
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="when do you need the money?">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="your email address" value="">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="landline phone" value="">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="mobile phone" value="">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="facebook account" value="">
+        </mat-form-field>
+    
+
+        <div>
+          <button mat-button matStepperNext (click)="step1Next()">Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step stepControl="secondStep">
+      <form fxLayout="column">
+        <ng-template matStepLabel>Tell us about your financials</ng-template>
+
+        <div style="display: flex; flex-wrap: wrap;">
+          <mat-list>
+            <mat-list-item>
+              <div style="flex: 10">Payment Number</div>
+              <div style="flex: 10">Amount Due</div>
+              <div style="flex: 10">Due Date</div>
+            </mat-list-item>
+            <mat-list-item *ngFor="let schedule of schedules">
+              <div style="flex: 10">{{schedule.paymentNumber}}</div>
+              <div style="flex: 10">{{schedule.dueAmount}}</div>
+              <div style="flex: 10">{{schedule.dueDate | date: 'MMM/dd/yyyy'}}</div>              
+            </mat-list-item>
+          </mat-list>
+        </div>        
+
+        <mat-form-field>
+          <input matInput placeholder="middle name" value="">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Prev</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-horizontal-stepper>
+
+</div>

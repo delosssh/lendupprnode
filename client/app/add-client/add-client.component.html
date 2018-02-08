@@ -1,0 +1,82 @@
+<div class="container">
+  <div style="display: flex">
+    <mat-icon matPrefix>person</mat-icon>
+    <mat-form-field>
+      <input matInput placeholder="first name" id="firstName" name="firstName" [(ngModel)]="client.firstName" style="flex: 1">
+    </mat-form-field>
+    <!-- <button md-button><md-icon>search</md-icon></button> -->
+  </div>
+  <div style="display: flex">
+    <mat-icon matPrefix>person</mat-icon>
+    <mat-form-field>
+      <input matInput placeholder="middle name" id="middleName" [(ngModel)]="client.middleName" style="flex: 1">
+    </mat-form-field>
+  </div>
+  <div style="display: flex">
+    <mat-icon matPrefix>person</mat-icon>
+    <mat-form-field>
+      <input matInput placeholder="last name" id="lastName" [(ngModel)]="client.lastName" style="flex: 1">
+    </mat-form-field>
+  </div>
+
+  <div style="display: flex">
+    <mat-icon matPrefix>calendar</mat-icon>
+    <mat-form-field>
+      <input matInput placeholder="birthdate" id="birthdate" name="birthdate" [value]="client.birthdate | date: 'MM/dd/yyyy'">
+    </mat-form-field>
+  </div>
+
+  <div style="display: flex">
+    <mat-icon matPrefix>calendar</mat-icon>
+    <mat-form-field>
+      <input matInput placeholder="address1" id="address1" [(ngModel)]="client.address1">
+    </mat-form-field>
+  </div>
+    
+  <div style="display: flex">
+    <mat-icon matPrefix>calendar</mat-icon>
+    <mat-form-field>
+      <input matInput placeholder="address2" id="address2" [(ngModel)]="client.address2">
+    </mat-form-field>
+  </div>
+
+  <div style="display: flex">
+    <mat-icon matPrefix>calendar</mat-icon>
+    <mat-form-field>
+      <input matInput placeholder="zone name" id="zoneName" [(ngModel)]="client.zoneName">
+    </mat-form-field>
+  </div>
+
+  <div style="display: flex">
+    <mat-icon matPrefix>calendar</mat-icon>
+    <mat-form-field>
+      <input matInput placeholder="barangay" id="barangayName" [(ngModel)]="client.barangayName">
+    </mat-form-field>
+  </div>
+
+  <div style="display: flex">
+    <mat-icon matPrefix>calendar</mat-icon>
+    <mat-select placeholder="city" [(ngModel)]="client.cityName">
+      <mat-option value="sjc">san jose city</mat-option>
+      <mat-option value="cab">cabanatuan city</mat-option>
+      <mat-option value="bag">baguio city</mat-option>
+      <mat-option value="scm">science city of munoz</mat-option>
+    </mat-select>
+  </div>    
+  
+  <div style="display: flex">
+    <mat-icon matPrefix>calendar</mat-icon>
+    <mat-select placeholder="province" [(ngModel)]="client.provinceName">
+      <mat-option value="ne">nueva ecija</mat-option>
+      <mat-option value="bu">bulacan</mat-option>
+      <mat-option value="be">benguet</mat-option>
+      <mat-option value="tu">tuguegarao</mat-option>
+    </mat-select>
+  </div>    
+
+  <div style="display: flex; margin-top: 5vh" fxLayoutAlign="center">
+    <button mat-raised-button color="primary" (click)="save()">Save</button>
+    <button mat-button>Cancel</button>
+  </div>
+
+</div>

@@ -1,0 +1,277 @@
+<div style="display: flex; flex-wrap: wrap" fxLayout="column">
+    
+  <div class="feature">
+    <!-- <div style="min-width: 80vh; min-height: 75vh; background-color:coral; margin: 10px 10px 10px 10px">
+      APPLY WITH CONFIDENCE
+    </div>
+
+    <div style="min-width: 80vh; min-height: 75vh; background-color:coral; margin: 10px 10px 10px 10px">
+      APPLY WITH CONFIDENCE
+    </div> -->
+
+    <div fxLayout="column">
+
+      <mat-card style="width: 600px; max-width: 600px; margin: 10px 10px 0px 10px; border-radius: 5px;">
+        <mat-card-content>
+          <div style="display: flex; flex-wrap: wrap" fxLayout="row" fxLayoutGap="10px">
+
+            <mat-form-field fxFlex>
+              <input matInput placeholder="first name" value="">
+            </mat-form-field>
+
+            <mat-form-field fxFlex>
+              <input matInput placeholder="middle name" value="">
+            </mat-form-field>
+              
+            <mat-form-field fxFlex>
+              <input matInput placeholder="last name" value="">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker" placeholder="birthdate">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+  
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap;" fxLayout="row" fxLayoutGap="10px">
+              
+            <mat-form-field fxFlex>
+              <mat-select placeholder="occupation" name="occupation" [(ngModel)]="occupation">
+                <mat-option value="employed">Employed</mat-option>
+                <mat-option value="self-employed">Self-Employed</mat-option>
+                <mat-option value="pensioner">Pensioner</mat-option>
+                <mat-option value="ofw">OFW</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field fxFlex>
+              <mat-select placeholder="years">
+                <mat-option value="employed">< 1 Year</mat-option>
+                <mat-option value="employed">1 to 3 Years</mat-option>
+                <mat-option value="employed">> 3 Years</mat-option>
+              </mat-select>
+            </mat-form-field>
+              
+            <!-- <mat-form-field fxFlex>
+              <input matInput placeholder="first name" value="">
+            </mat-form-field> -->
+  
+            <mat-form-field fxFlex *ngIf="occupationSelfEmployed()">
+              <mat-select placeholder="business">
+                <mat-option value="employed">Sari-sari Store</mat-option>
+                <mat-option value="self-employed">Hardware Store</mat-option>
+                <mat-option value="pensioner">Buy and Sell</mat-option>
+                <mat-option value="ofw">Farmer</mat-option>
+              </mat-select>
+            </mat-form-field>
+  
+          </div>
+
+          <div style="display: flex; justify-content: right" fxLayout="row">
+            <!-- <span flex> sdfsf</span> -->
+            <button flex="20" mat-raised-button color="accent">Proceed</button>
+  
+          </div>
+          
+        </mat-card-content>
+      </mat-card>       
+
+      <!-- <mat-card style="width: 300px; max-width: 600px; margin: 0px 10px 10px 10px">
+          <mat-card-content>
+            <div style="display: flex;" fxLayout="row" fxLayoutGap="10px">
+  
+              <mat-form-field fxFlex>
+                <input matInput placeholder="first name" value="">
+              </mat-form-field>
+  
+              <mat-form-field fxFlex>
+                <input matInput placeholder="first name" value="">
+              </mat-form-field>
+                
+  
+            </div>
+          </mat-card-content>
+        </mat-card>   -->
+        <!-- <button name="test" (click)="test()">name</button> -->
+        
+        
+    </div>
+
+  </div>
+
+  <div class="eligible" fxLayout="column">
+  <!-- <div style="background-color:#8510C0; justify-content: center; align-items: center; min-height: 50vh; width: 100%; display: flex; flex-wrap: wrap;"> -->
+
+    <!-- <div style="background-color:aqua; margin-bottom: 0px;">
+      <h1>you are eligible if</h1>
+    </div> -->
+    <h1>You are Eligible if</h1>
+    
+    <div>
+    <!-- <div style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center;"> -->
+      <mat-card>
+        <mat-card-content>
+          <div style="width: 100%;">
+            <!-- <img src="https://www.w3schools.com/w3css/img_avatar3.png" style="max-width: 60px"> -->
+            <mat-icon>person</mat-icon>
+            <!-- <div>You are 21 y/o or above</div> -->
+            <h2>21 y/o or above, but not 70 y/o upon loan maturity</h2>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-content>
+          <div >
+            <mat-icon>home</mat-icon>
+            <h2>A Filipino citizen, bills on his/her name</h2>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-content>
+          <div >
+            <mat-icon>store</mat-icon>
+            <h2>Self-employed operating a legitimate business that has been profitable at least 3 years</h2>
+          </div>
+        </mat-card-content>
+      </mat-card>
+        
+      <mat-card>
+        <mat-card-content>
+          <div >
+            <mat-icon>attach_money</mat-icon>
+            <h2>Employed for at least 1 year earning a gross monthly income of Php15,000</h2>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+  </div>
+
+  <div class="how-it-works" fxLayout="column">
+      
+    <h1>How LendUp Works</h1>
+    <div style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center;">
+      <mat-card>
+          <mat-card-headers>
+            <mat-card-title>Step 1</mat-card-title>
+          </mat-card-headers>
+    
+            <mat-card-content>
+          <div>
+            <h2>Accomplished application form which includes name and contact details. </h2>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-headers>
+          <mat-card-title>Step 2</mat-card-title>
+        </mat-card-headers>
+  
+        <mat-card-content>
+          <div >
+            <h2>Choose from several options and choose the best one</h2>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-headers>
+          <mat-card-title>Step 3</mat-card-title>
+        </mat-card-headers>
+
+        <mat-card-content>
+          <div >
+            <h2>We process your submitted loan application </h2>
+          </div>
+        </mat-card-content>
+      </mat-card>
+        
+      <mat-card>
+        <mat-card-headers>
+          <mat-card-title>Step 4</mat-card-title>
+        </mat-card-headers>
+
+        <mat-card-content>
+          <div >
+            <h2>Collect your loan after approval</h2>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+  </div>
+      
+  <!-- footer -->
+  <div class="footer">
+  <!-- <div style="background-color:#545454; justify-content: center; align-items: center; min-height: 30vh; width: 100%; display: flex; flex-wrap: wrap;"> -->
+      
+    <div>
+      <mat-card>
+        <mat-card-headers>
+          <mat-card-subtitle>ABOUT US</mat-card-subtitle>
+        </mat-card-headers>
+        <mat-card-content>
+          <p>Home</p>
+          <p>Our Story</p>
+          <p>Branches</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card style="max-width: 25vh; margin: 10px 10px 10px 10px;">
+        <mat-card-headers>
+          <mat-card-subtitle>PRODUCTS</mat-card-subtitle>
+        </mat-card-headers>
+        <mat-card-content>
+          <p>Personal Loan</p>
+          <p>Business Loan</p>
+          <p>Salary Loan</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card style="max-width: 25vh; margin: 10px 10px 10px 10px;">
+        <mat-card-headers>
+          <mat-card-subtitle>TOOLS</mat-card-subtitle>
+        </mat-card-headers>
+        <mat-card-content>
+          <p>Loan</p>
+          <p>Calculator</p>
+          <p>Personal Loan</p>
+          <p>Business Loan</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card style="max-width: 25vh; margin: 10px 10px 10px 10px;">
+        <mat-card-headers>
+          <mat-card-subtitle>GUIDES</mat-card-subtitle>
+        </mat-card-headers>
+        <mat-card-content>
+          <p>Personal Loan</p>
+          <p>Business Loan</p>
+          <p>Salary Loan</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card style="max-width: 25vh; margin: 10px 10px 10px 10px;">
+        <mat-card-headers>
+          <mat-card-subtitle>CONNECT WITH US</mat-card-subtitle>
+        </mat-card-headers>
+        <mat-card-content>
+          <mat-icon>facebook</mat-icon>
+          <mat-icon>instagram</mat-icon>
+        </mat-card-content>
+      </mat-card>
+
+
+    </div>
+
+  </div>
+      
+
+</div>
+    

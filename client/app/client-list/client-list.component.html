@@ -1,0 +1,54 @@
+<!-- <div style="display: flex" *ngFor="let client of clients">
+  <div style="flex: 1">{{client.clientNumber}}</div>
+  <div style="flex: 1">{{client.firstName}}</div>
+  <div style="flex: 1">{{client.middleName}}</div>
+  <div style="flex: 1">{{client.lastName}}</div>
+  <div style="flex: 1"><client-list-child [clientNumber]="client.clientNumber"></client-list-child></div>
+</div> -->
+
+<!-- <div class="">
+  <mat-table #table [dataSource]="dataSource">
+    <ng-container cdkColumnDef="clientNumber">
+      <mat-header-cell>Client Number</mat-header-cell>
+      <mat-cell>{{ client.clientNumber }}</mat-cell>
+    </ng-container>
+  </mat-table>
+</div> -->
+
+<div>
+  <button mat-raised-button color="accent" routerLink="/add-client">Add Client</button>
+</div>
+<div style="display: flex; flex-wrap: wrap;">
+    <mat-card style="flex: 1; max-width: 30rem; border-radius: 10px;" *ngFor="let client of clients" (click)="details(client._id)">
+      <!-- <mat-card-title>{{ client.lastName }}, {{ client.firstName }}</mat-card-title> -->
+      <mat-card-title>Client <b>{{client.clientNumber}}</b></mat-card-title>
+      <mat-card-content>
+        <div fxLayout="row">
+          <div flex>
+            <img style="height: 100px; border-radius: 50%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Icons8_flat_businessman.svg/1024px-Icons8_flat_businessman.svg.png">
+          </div>
+          <div flex fxLayout="column">
+            <!-- <span>{{ client.firstName }}</span> -->
+            <mat-form-field>
+              <input matInput placeholder="first name" [value]="client.firstName" readonly="true">
+            </mat-form-field>
+            <!-- <span matLine>{{ client.middleName }}</span>                   -->
+            <mat-form-field>
+              <input matInput placeholder="last name" [value]="client.lastName" readonly="true">
+            </mat-form-field>
+
+            <mat-form-field>
+              <client-list-child [clientNumber]="client.clientNumber" (load)="client.loans = $event"></client-list-child>
+                
+              <input matInput placeholder="total loans" [value]="client.loans" readonly="true">
+              <!-- <client-list-child [clientNumber]="client.clientNumber"></client-list-child> -->
+            </mat-form-field>
+  
+          </div>
+        </div>     
+      </mat-card-content>
+      <mat-card-actions>
+          <!-- <client-list-child [clientNumber]="client.clientNumber"></client-list-child> -->
+      </mat-card-actions>
+    </mat-card>  
+</div>

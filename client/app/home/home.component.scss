@@ -1,0 +1,203 @@
+.feature {
+  background-color:#fafafa ;
+  justify-content: center;
+  align-items: center; 
+  min-height: 500px;
+  height: 500px; 
+  width: 100%; 
+  height: 100%;
+  display: flex; 
+  flex-wrap: wrap;
+  background-image: url('/assets/lu_dash_04.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.feature div {
+  // width: 100%; 
+  display: flex; 
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  // background-color: darkblue;
+}
+
+.eligible {
+  background-color: #fafafa;
+  justify-content: center;
+  align-items: center; 
+  min-height: 50vh; 
+  height: 80vh; 
+  width: 100%; 
+  height: 100%;
+  display: flex; 
+  flex-wrap: wrap;
+
+  div {
+    width: 100%; 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+
+    mat-card { 
+      max-width: 25vh;
+      height: 25vh;
+      // margin: 10px 10px 10px 10px;
+      margin-top: 5px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      // box-shadow: none;
+      
+      mat-card-content {
+
+        // style="max-width: 25vh; min-height: 19vh; height: 25vh; margin: 10px 10px 10px 10px;"
+
+        div {
+      
+          mat-icon {
+            font-size: 80px;
+            width: 100px;
+            height: 60px;
+            margin-bottom: 10px;
+            color: #FF4499;
+            // color: "accent";
+          }
+
+          h2 {
+            font-family: Quicksand;
+            color: #545454;
+            font-weight: 400;
+            font-size: 14pt;
+          }
+        }
+
+      }
+    }
+    
+    div {
+      margin-top: 30px;
+    }
+  }
+
+  h1 {
+    font-family: Quicksand;
+    font-size: 2em;
+  }
+}
+
+.how-it-works {
+  background-color:#FAFAFA;
+  justify-content: center;
+  align-items: center; 
+  min-height: 50vh; 
+  height: 80vh; 
+  width: 100%; 
+  height: 100%;
+  display: flex; 
+  flex-wrap: wrap;
+
+  div {
+    width: 100%; 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+
+    mat-card { 
+      max-width: 25vh;
+      height: 25vh;
+      // margin: 10px 10px 10px 10px;
+      margin-top: 5px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      // box-shadow: none;
+      
+      mat-card-content {
+
+        // style="max-width: 25vh; min-height: 19vh; height: 25vh; margin: 10px 10px 10px 10px;"
+
+        div {
+      
+          mat-icon {
+            font-size: 80px;
+            width: 100px;
+            height: 60px;
+            margin-bottom: 10px;
+            color: #5E5E5E;
+          }
+
+          h2 {
+            font-family: Quicksand;
+            color: #545454;
+            font-weight: 400;
+            font-size: 14pt;
+          }
+        }
+
+      }
+    }
+
+    div {
+      margin-top: 30px;
+    }
+
+  }
+
+  h1 {
+    font-family: Quicksand;
+  }
+}
+
+
+.footer {
+  background-color: #545454;
+  justify-content: center;
+  align-items: center; 
+  min-height: 30vh; 
+  height: 50vh; 
+  width: 100%; 
+  height: 100%;
+  display: flex; 
+  flex-wrap: wrap;
+
+  div {
+    width: 100%; 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+
+    mat-card {
+      width: 20vh;
+      max-width: 25vh;
+      margin: 10px 10px 10px 10px;
+      color: white;
+      background-color: #545454;
+      box-shadow: none;
+
+      mat-card-headers mat-card-subtitle {
+        font-weight: 600;
+        color: white;
+      }
+    }
+  }  
+}
+
+.check {
+  background-color:#545454; 
+  justify-content: center; 
+  align-items: center; 
+  min-height: 30vh; 
+  width: 100%; 
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+// style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center;"
+
+// mat-card
+// style="width: 20vh; max-width: 25vh; margin: 10px 10px 10px 10px;"
